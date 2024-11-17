@@ -5,21 +5,21 @@
 class Rpn < Formula
   desc "A Linux CLI RPN calculator"
   homepage "https://github.com/marcopaganini/rpn"
-  version "0.3.2"
+  version "1.0.0"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/marcopaganini/rpn/releases/download/v0.3.2/rpn_0.3.2_darwin_amd64.tar.gz"
-      sha256 "294272acfde8014488df97fd835baa5255eb0b6ba459ec98554f089bd892c8b3"
+      url "https://github.com/marcopaganini/rpn/releases/download/v1.0.0/rpn_1.0.0_darwin_amd64.tar.gz"
+      sha256 "79b961ddc293ced20516f0b614d1f34330dc0d89a3cf3dc62a125e3440453c60"
 
       def install
         bin.install "rpn"
       end
     end
     on_arm do
-      url "https://github.com/marcopaganini/rpn/releases/download/v0.3.2/rpn_0.3.2_darwin_arm64.tar.gz"
-      sha256 "5b91b94c44628b65a642dd962357a292f8fae0f064933c2f18f97b62aca5e6ab"
+      url "https://github.com/marcopaganini/rpn/releases/download/v1.0.0/rpn_1.0.0_darwin_arm64.tar.gz"
+      sha256 "cd2c661561739645a54dd6b1a0f78a1ef142e185413fd2d75e0d654180fd57a0"
 
       def install
         bin.install "rpn"
@@ -30,8 +30,8 @@ class Rpn < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/marcopaganini/rpn/releases/download/v0.3.2/rpn_0.3.2_linux_amd64.tar.gz"
-        sha256 "a075c067d459299485474c2365b8bf3fdb63a8809dc2f2852982bfbb0d5ed761"
+        url "https://github.com/marcopaganini/rpn/releases/download/v1.0.0/rpn_1.0.0_linux_amd64.tar.gz"
+        sha256 "66ce9a1699b32542d354dc4a2b08119dc07566bf1e4add180d730bcfe628417f"
 
         def install
           bin.install "rpn"
@@ -40,8 +40,8 @@ class Rpn < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/marcopaganini/rpn/releases/download/v0.3.2/rpn_0.3.2_linux_arm64.tar.gz"
-        sha256 "cb5394c966a811e3d609bace70de656deeb796c36f416d4210f2a15a9ce4c3a4"
+        url "https://github.com/marcopaganini/rpn/releases/download/v1.0.0/rpn_1.0.0_linux_arm64.tar.gz"
+        sha256 "5f87978eefcf460b96a45d2afa5003957d92c059cbc214b6f31cd937eca2cf49"
 
         def install
           bin.install "rpn"
