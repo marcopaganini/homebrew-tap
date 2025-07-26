@@ -11,7 +11,7 @@ class Videofix < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/marcopaganini/videofix/releases/download/v0.1.1/videofix_0.1.1_darwin_amd64.tar.gz"
-      sha256 "da1057ee1e20ee8d99bb3dc069a71be965ae47c8b9ae7f0ea5d39bd08bbf952c"
+      sha256 "5820fa08a2cb525b9c4b6979a007034d8ac08742db742c1aa5afe1bfc618a87b"
 
       def install
         bin.install "videofix"
@@ -19,7 +19,7 @@ class Videofix < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/marcopaganini/videofix/releases/download/v0.1.1/videofix_0.1.1_darwin_arm64.tar.gz"
-      sha256 "6700b8f5578aa2809999da91f7d8137fe78cec5d79e4504e5ffd26e84a04f4b3"
+      sha256 "84139fc929acbf0e6b76f2eed21983f3399d5b08c72f65a819358755d59bde4e"
 
       def install
         bin.install "videofix"
@@ -30,14 +30,14 @@ class Videofix < Formula
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
       url "https://github.com/marcopaganini/videofix/releases/download/v0.1.1/videofix_0.1.1_linux_amd64.tar.gz"
-      sha256 "53fe7abb6b539679a4028dea542c2f0a45fad10116ec7ed4facd3c199df3de7d"
+      sha256 "a5ae6c66b6c04b8bdb5188affac642ae409d96a9d7033a3dc7bdc976a58649f6"
       def install
         bin.install "videofix"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
       url "https://github.com/marcopaganini/videofix/releases/download/v0.1.1/videofix_0.1.1_linux_arm64.tar.gz"
-      sha256 "3e0f4e8471376ed3ba2c78b7b64577c768aface41f3e5c678fcc58c43f93b16b"
+      sha256 "3f2e517c8f7cab019aedcdaa6fecf005376383679dbf820f2b43e05c80343452"
       def install
         bin.install "videofix"
       end
