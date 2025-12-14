@@ -5,21 +5,21 @@
 class Rpn < Formula
   desc "A Linux CLI RPN calculator"
   homepage "https://github.com/marcopaganini/rpn"
-  version "1.0.1"
+  version "1.0.2"
   license "MIT"
 
   on_macos do
-    on_intel do
-      url "https://github.com/marcopaganini/rpn/releases/download/v1.0.1/rpn_1.0.1_darwin_amd64.tar.gz"
-      sha256 "9212ba60f97d9d4a18dbd1c059b321b9a9c0cc14dc99b086e6d97397394837ef"
+    if Hardware::CPU.intel?
+      url "https://github.com/marcopaganini/rpn/releases/download/v1.0.2/rpn_1.0.2_darwin_amd64.tar.gz"
+      sha256 "bc7a77944630fc3ebcb340d0575a898be4ed19069d2a94c9352d1901d117cb79"
 
       def install
         bin.install "rpn"
       end
     end
-    on_arm do
-      url "https://github.com/marcopaganini/rpn/releases/download/v1.0.1/rpn_1.0.1_darwin_arm64.tar.gz"
-      sha256 "9a6db45927c440a53794f1fc97ae148da349ba4ce55ed7ff58793ec7d5d7264e"
+    if Hardware::CPU.arm?
+      url "https://github.com/marcopaganini/rpn/releases/download/v1.0.2/rpn_1.0.2_darwin_arm64.tar.gz"
+      sha256 "aeb1c72677d21034a2cc824a96a1328c4cc0bbc644e718bc161f388e2582b638"
 
       def install
         bin.install "rpn"
@@ -28,24 +28,18 @@ class Rpn < Formula
   end
 
   on_linux do
-    on_intel do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/marcopaganini/rpn/releases/download/v1.0.1/rpn_1.0.1_linux_amd64.tar.gz"
-        sha256 "90619a577aeb933cad7791594472f426674478a05da91d16e7ac060152a7e7c6"
-
-        def install
-          bin.install "rpn"
-        end
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/marcopaganini/rpn/releases/download/v1.0.2/rpn_1.0.2_linux_amd64.tar.gz"
+      sha256 "8d48f78360c2da43e25af1e47d02f319e90cd236c8c5df2fe75a9adff3eedfb3"
+      def install
+        bin.install "rpn"
       end
     end
-    on_arm do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/marcopaganini/rpn/releases/download/v1.0.1/rpn_1.0.1_linux_arm64.tar.gz"
-        sha256 "ecc434f33e35823a708cd4e70a6fca68cc18379d4a432f7008c1a0accf8fa43b"
-
-        def install
-          bin.install "rpn"
-        end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/marcopaganini/rpn/releases/download/v1.0.2/rpn_1.0.2_linux_arm64.tar.gz"
+      sha256 "bae6eb84989b205f51f225133dd0c678941a05918d59f210ece1a6fe3eb673c4"
+      def install
+        bin.install "rpn"
       end
     end
   end
