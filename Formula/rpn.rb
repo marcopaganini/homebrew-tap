@@ -5,23 +5,23 @@
 class Rpn < Formula
   desc "A Linux CLI RPN calculator"
   homepage "https://github.com/marcopaganini/rpn"
-  version "1.0.2"
+  version "1.0.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/marcopaganini/rpn/releases/download/v1.0.2/rpn_1.0.2_darwin_amd64.tar.gz"
-      sha256 "bc7a77944630fc3ebcb340d0575a898be4ed19069d2a94c9352d1901d117cb79"
+      url "https://github.com/marcopaganini/rpn/releases/download/v1.0.3/rpn_1.0.3_darwin_amd64.tar.gz"
+      sha256 "0793099a818bf5477962ba98ec59aa25aeff559f0815716ca4dd91a1f2941254"
 
-      def install
+      define_method(:install) do
         bin.install "rpn"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/marcopaganini/rpn/releases/download/v1.0.2/rpn_1.0.2_darwin_arm64.tar.gz"
-      sha256 "aeb1c72677d21034a2cc824a96a1328c4cc0bbc644e718bc161f388e2582b638"
+      url "https://github.com/marcopaganini/rpn/releases/download/v1.0.3/rpn_1.0.3_darwin_arm64.tar.gz"
+      sha256 "69d23bc5c957d89d554890f8293269a26204e4611e718f4b7e1c4feb247d14c4"
 
-      def install
+      define_method(:install) do
         bin.install "rpn"
       end
     end
@@ -29,16 +29,16 @@ class Rpn < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/marcopaganini/rpn/releases/download/v1.0.2/rpn_1.0.2_linux_amd64.tar.gz"
-      sha256 "8d48f78360c2da43e25af1e47d02f319e90cd236c8c5df2fe75a9adff3eedfb3"
-      def install
+      url "https://github.com/marcopaganini/rpn/releases/download/v1.0.3/rpn_1.0.3_linux_amd64.tar.gz"
+      sha256 "a2a8c6712465bd710ba914da48ea2b06205a7ecf49df66b610f9bb9befd73d17"
+      define_method(:install) do
         bin.install "rpn"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/marcopaganini/rpn/releases/download/v1.0.2/rpn_1.0.2_linux_arm64.tar.gz"
-      sha256 "bae6eb84989b205f51f225133dd0c678941a05918d59f210ece1a6fe3eb673c4"
-      def install
+      url "https://github.com/marcopaganini/rpn/releases/download/v1.0.3/rpn_1.0.3_linux_arm64.tar.gz"
+      sha256 "a7962a25ede5abcb278b90c641849d191e7cb7cc37276ededbb95ccea6454440"
+      define_method(:install) do
         bin.install "rpn"
       end
     end
